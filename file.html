@@ -9,13 +9,36 @@
   crossorigin="anonymous"></script>
     <script>
     $(function(){
-      var name =$('#adj').val();   
-           var noun =$('#noun').val();
-           var name=$('#name').val();
+  
+      $('button').click(function(){
+         var x = $('input[name=x]:checked').val();
+         var y = $(pizza).val();
+         var z = $(food).val();
+      console.log(x)
+       console.log(y)
+        console.log(z)
+      })
     });
     </script>
   </head>
   <body>
-  
+    <h3>Please enter your name:</h3>
+    <input id=pizza type="text" name="fname"><br>
+     <h3>Please enter what you want the award to say:</h3>
+    <input id=food type="text" name="fname"><br>
+    <h3>Select a font</h3>
+  <input type="radio" name="y" class="gold_color" value="Times" >
+    Times New Roman
+   <input type="radio" name="x" class="gold_color" value="courier">
+    courier
+    <input type="radio" name="x" class="gold_color" value="Helvetica">
+    Helvetica
+    <input type="radio" name="x" class="gold_color" value="sans-serif">
+    Helvetica
+    <p></p>
+  <button>Enter</button>
+   <p></p>
+  <div id=day></div>
+  <img id="myImg" src="download.jpg" alt="download.jpg" />
   </body>
 </html>
