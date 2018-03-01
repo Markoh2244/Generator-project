@@ -1,44 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <title>Generator-project</title>
-    <script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script>
-    $(function(){
-  
-      $('button').click(function(){
-         var x = $('input[name=x]:checked').val();
-         var y = $(pizza).val();
-         var z = $(food).val();
-      console.log(x)
-       console.log(y)
-        console.log(z)
-      })
-    });
+        $(function() {
+
+            $('button').click(function() {
+                var x = $('input[name=x]:checked').val();
+                var y = $(pizza).val();
+                var z = $(food).val();
+                console.log(x)
+                console.log(y)
+                console.log(z)
+                $('div').css("font-family",$('input[name=x]:checked').val());
+                $('div').html("Awarded to " + y + " for:<br>" + z);
+            })
+        });
     </script>
-  </head>
-  <body>
+    <style type="text/css">
+        div.fixed {
+            font-family: x;
+            position: fixed;
+            top: 355px;
+            left: 30px;
+            width: 250px;
+            height: 3;
+            border: 3px solid gold;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
     <h3>Please enter your name:</h3>
     <input id=pizza type="text" name="fname"><br>
-     <h3>Please enter what you want the award to say:</h3>
+    <h3>Please enter what you want the award to say:</h3>
     <input id=food type="text" name="fname"><br>
     <h3>Select a font</h3>
-  <input type="radio" name="y" class="gold_color" value="Times" >
-    Times New Roman
-   <input type="radio" name="x" class="gold_color" value="courier">
-    courier
-    <input type="radio" name="x" class="gold_color" value="Helvetica">
-    Helvetica
-    <input type="radio" name="x" class="gold_color" value="sans-serif">
-    Helvetica
+    <input type="radio" name="x" class="gold_color" value="Times"> Times New Roman
+    <input type="radio" name="x" class="gold_color" value="courier"> courier
+    <input type="radio" name="x" class="gold_color" value="Helvetica"> Helvetica
+    <input type="radio" name="x" class="gold_color" value="serif"> serif
     <p></p>
-  <button>Enter</button>
-   <p></p>
-  <div id=day></div>
-  <img id="myImg" src="download.jpg" alt="download.jpg" />
-  </body>
+    <button>Enter</button>
+    <p></p>
+    <div class="fixed">
+    </div>
+    <img id="myImg" src="download.jpg" alt="download.jpg" />
+</body>
+
 </html>
